@@ -1,20 +1,26 @@
 const prompt = require ("prompt-sync")({sigint: true})
 
-    let N = parseInt(prompt("Número de premiados: "))
-    let Ti = prompt("Tamanhos: ").split(" ")
-    
-    let P = parseInt(prompt("Quantidade de camisas P: "))
-    let M = parseInt(prompt("Quantidade de camisas M: "))
+let N = parseInt(prompt("Número de premiados: "))
+let Ti = prompt("Tamanhos: ").split(" ")
 
-while(N <= 1000 && N >= 1 && P <= 1000 && P >= 0 && M <= 1000 && M >= 0 && N <=(P+M) && Ti.length != N ){
-    let N = parseInt(prompt("Número de premiados: "))
-    let Ti = prompt("Tamanhos: ").split(" ")
-    
-    let P = parseInt(prompt("Quantidade de camisas P: "))
-    let M = parseInt(prompt("Quantidade de camisas M: "))
-}
+let P = parseInt(prompt("Quantidade de camisas P: "))
+let M = parseInt(prompt("Quantidade de camisas M: "))
 
 function verifica_recebimento(){
-p = []
+    let count_m = 0
+    let count_p = 0
+    for (i=0; i<Ti.length; i++){
+        if (Ti[i] == 1){
+            count_p++
+        }else{
+            count_m++
+        }
+    }
+    //verifica se o número de produção corresponde aos tamanhos requisitados
+    if (count_m == M && count_p == P){
+        return "S"
+    } else {
+        return "N"
+    }
 
 }
