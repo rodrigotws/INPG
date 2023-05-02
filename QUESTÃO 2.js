@@ -1,13 +1,14 @@
 const prompt = require ("prompt-sync")()
 
-let x = Number(prompt("Quota"))
-let n = Number(prompt("Quantidade de meses"))
-let meses = []
-let consumo = 0
-let quotaTotal = 0
-for (let i = 0; i < n; i++){
-    meses.push(Number(prompt("mes")))
-    consumo += meses[i]
-    quotaTotal += x
+let x = parseInt(prompt("Quota: "))
+let n = parseInt(prompt("Quantidade de meses: "))
+let mega_usado
+let saldo = x
+let mes = 1
+
+while (mes <= n){
+  mega_usado = parseInt(prompt("Quantidade de mb usados: "))
+  saldo = x + (saldo - mega_usado)
+  console.log(`saldo: ${saldo}`)
+  mes++
 }
-console.log(quotaTotal - consumo + 10)
