@@ -1,29 +1,34 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <style>
+        input[type=submit] {
+            width: 10%;
+            background-color: #5b63ad;
+            color: rgb(255, 255, 255);
+            padding: 5px 10px;
+            margin: 2px 0;
+            border: none;
+            border-radius: 1px;
+            cursor: pointer;
+          }
+          </style>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>pontos turisticos</title>
+    <title>Document</title>
 </head>
 <body>
-    <label><h1>Pontos turísticos de Alagoas</h1></label> 
-     <table border="1">
-
-        <tr> 
-        <td> 
-            <label>Restaurantes</label>
-                <img src="restaurante exemplo.png" width="250" height="250">
-                <li><a href="https://blog.123milhas.com/lugares-para-comer-em-alagoas-os-melhores-restaurantes/" target="_blank">Clique aqui</a></li>
-        </td>
-    </tr>
-        <tr> 
-        <td>
-            <label>Feirinhas</label>
-            <img src="feirinha maceio.jpg" width="250" height="250">
-            <li><a href="https://www.maceioalagoas.com/2022/02/5-feiras-de-artesanato-em-maceio-que-voce-precisa-visitar.html" target="_blank">Clique aqui</a></li>
-             </td>
-        </tr>
-    </table>
+    <div>LOGIN 
+        <form>
+                <input type="text" id="username" name="username" placeholder="username"><br>
+                <input type="password" id="password" name="password" placeholder="password"><br>
+                <input type="checkbox" id="remember" name="remember" value="remember">
+                <label for="remember">Remember me</label>&nbsp;
+                <a href="index.html">forgot?</a><br>
+                <input type="submit" value="LOGIN">
+        </form>
+    </div>
+    
 </body>
 </html>
